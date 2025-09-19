@@ -79,6 +79,8 @@ public class Evento {
         }
     }
 
+    //toString
+
     @Override
     public String toString(){
         return "Titolo evento: " + titolo + "\nData evento: " + data;
