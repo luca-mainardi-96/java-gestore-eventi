@@ -65,47 +65,47 @@ public class Main {
 
         // //Prenotazione posti
 
-        // System.out.println("Vuoi prenotare uno o più posti? (si/no) ");
-        // String scelta = scan.nextLine();
-        // if(scelta.equalsIgnoreCase("si")){
-        //     System.out.println("Quanti posti vuoi prenotare? ");
-        //     int sceltaPosti = scan.nextInt();
-        //     scan.nextLine();
-        //         if(sceltaPosti <= 0 || sceltaPosti > (e.getPostiTotali() - e.getPostiPrenotati())){
-        //             throw new IllegalArgumentException("Il numero di posti non può essere negativo o superiore ai posti disponibili.");
-        //         }else{
-        //             for(int i=0; i<sceltaPosti; i++){
-        //                 e.prenota();
-        //             }
-        //         }
-        // }else if(scelta.equalsIgnoreCase("no")){
-        //     System.out.println("Hai scelto no.");
-        // }else{
-        //     System.out.println("Scelta non valida.");
-        // }
+        System.out.println("Vuoi prenotare uno o più posti? (si/no) ");
+        String scelta = scan.nextLine();
+         if(scelta.equalsIgnoreCase("si")){
+             System.out.println("Quanti posti vuoi prenotare? ");
+             int sceltaPosti = scan.nextInt();
+             scan.nextLine();
+                 if(sceltaPosti <= 0 || sceltaPosti > (e.getPostiTotali() - e.getPostiPrenotati())){
+                    throw new IllegalArgumentException("Il numero di posti non può essere negativo o superiore ai posti disponibili.");
+                 }else{
+                     for(int i=0; i<sceltaPosti; i++){
+                        e.prenota();
+                     }
+                 }
+         }else if(scelta.equalsIgnoreCase("no")){
+             System.out.println("Hai scelto no.");
+         }else{
+             System.out.println("Scelta non valida.");
+         }
 
-        // System.out.println("Evento: " + e.getTitolo() + "\nNumero posti totali: " + e.getPostiTotali() + "\nNumero posti disponibili: " + (e.getPostiTotali() - e.getPostiPrenotati()));
+         System.out.println("Evento: " + e.getTitolo() + "\nNumero posti totali: " + e.getPostiTotali() + "\nNumero posti disponibili: " + (e.getPostiTotali() - e.getPostiPrenotati()));
 
-        // //Disdetta prenotazioni
+         //Disdetta prenotazioni
 
-        // System.out.println("Vuoi disdire una o più prenotazioni? (si/no) ");
-        // String scelta2 = scan.nextLine();
-        // if(scelta2.equalsIgnoreCase("si")){
-        //     System.out.println("Quante prenotazioni vuoi disdire? ");
-        //     int sceltaPosti2 = scan.nextInt();
-        //     scan.nextLine();
-        //         if(sceltaPosti2 <= 0 || sceltaPosti2 > e.getPostiPrenotati()){
-        //             throw new IllegalArgumentException("Il numero di posti non può essere negativo o superiore ai posti prenotati.");
-        //         }else{
-        //             for(int i=0; i<sceltaPosti2; i++){
-        //                 e.disdici();
-        //             }
-        //         }
-        // }else if(scelta2.equalsIgnoreCase("no")){
-        //     System.out.println("Hai scelto no.");
-        // }else{
-        //     System.out.println("Scelta non valida.");
-        // }
+         System.out.println("Vuoi disdire una o più prenotazioni? (si/no) ");
+         String scelta2 = scan.nextLine();
+         if(scelta2.equalsIgnoreCase("si")){
+             System.out.println("Quante prenotazioni vuoi disdire? ");
+             int sceltaPosti2 = scan.nextInt();
+             scan.nextLine();
+                 if(sceltaPosti2 <= 0 || sceltaPosti2 > e.getPostiPrenotati()){
+                     throw new IllegalArgumentException("Il numero di posti non può essere negativo o superiore ai posti prenotati.");
+                 }else{
+                     for(int i=0; i<sceltaPosti2; i++){
+                         e.disdici();
+                     }
+                 }
+         }else if(scelta2.equalsIgnoreCase("no")){
+             System.out.println("Hai scelto no.");
+         }else{
+             System.out.println("Scelta non valida.");
+         }
 
         // System.out.println("Evento: " + e.getTitolo() + "\nNumero posti totali: " + e.getPostiTotali() + "\nNumero posti disponibili: " + (e.getPostiTotali() - e.getPostiPrenotati()));
 
