@@ -7,6 +7,8 @@ public class Concerto extends Evento {
     private LocalTime ora;
     private double prezzo;
 
+    //Costruttore
+
     public Concerto(String titolo, LocalDate data, int postiTotali, LocalTime ora, double prezzo){
         super(titolo, data, postiTotali);
         this.ora = ora;
@@ -22,16 +24,28 @@ public class Concerto extends Evento {
         }
     }
 
+    //Getters
+
     public LocalTime getOra() {
         return ora;
     }
 
-    public void setOra(LocalTime ora) {
-        this.ora = ora;
-    }
-
     public double getPrezzo() {
         return prezzo;
+    }
+
+    public String getDataOra(){
+        return "Data: " + formattaData(getData()) + " Ora: " +getOra();
+    }
+
+    public String getPrezzoFormattato(){
+        return "Prezzo: " + getPrezzo() + " €";
+    }
+
+    //Setters
+
+    public void setOra(LocalTime ora) {
+        this.ora = ora;
     }
 
     public void setPrezzo(double prezzo) {
@@ -45,15 +59,9 @@ public class Concerto extends Evento {
             System.err.println(e.getMessage());
         }
     }
-
-    public String getDataOra(){
-        return "Data: " + formattaData(getData()) + " Ora: " +getOra();
-    }
-
-    public String getPrezzoFormattato(){
-        return "Prezzo: " + getPrezzo() + " €";
-    }
     
+    //@Override
+
     @Override
     public String toString(){
         return getDataOra() + "\nTitolo: " + getTitolo() + "\n" +getPrezzoFormattato();

@@ -52,7 +52,7 @@ public class ProgrammaEventi {
     }
 
 
-    public int numeroElementi(){
+    public int numeroEventi(){
         return eventi.size();
     }
 
